@@ -1,0 +1,17 @@
+# You might want to use this as ~/.rpmmacros
+# but it's not necessary.
+
+# Don't build debug packages:
+%debug_package %{nil}
+
+# This puts the .rpm's in just RPMS, rather than RPMS/<arch>/
+%_rpmfilename   %%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm
+
+
+# If you want to actually sign and distribute packages to other people:
+#%_signature gpg
+#%_gpg_name  Mark Fassler <mfassler@users.noreply.github.com>
+#%packager   Mark Fassler <mfassler@users.noreply.github.com>
+#%vendor     myCoolDomainName.net
+
+
