@@ -63,6 +63,7 @@ rpmbuild -bb luajit-torch-sys.spec
 rpmbuild -bb luajit-torch-xlua.spec
 rpmbuild -bb luajit-torch-image.spec
 rpmbuild -bb luajit-torch-env.spec
+rpmbuild -bb luajit-torch-trepl.spec
 rpmbuild -bb xitari.spec
 ```
 
@@ -78,6 +79,7 @@ rpm -i luajit-torch-sys-*
 rpm -i luajit-torch-xlua-*
 rpm -i luajit-torch-image-*
 rpm -i luajit-torch-env-*
+rpm -i luajit-torch-trepl-*
 rpm -i xitari-*
 ```
 
