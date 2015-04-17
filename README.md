@@ -100,3 +100,10 @@ After you install the dependencies, here is the code that you can play with:
 https://sites.google.com/a/deepmind.com/dqn/
 
 
+
+## To use both "trepl" and "qt" together:
+```bash
+qlua -e "require('trepl')()"
+```
+
+
