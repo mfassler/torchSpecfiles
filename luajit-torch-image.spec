@@ -11,7 +11,9 @@ License:	BSD
 URL:		https://github.com/torch/image
 
 BuildRequires:	git, luajit-devel
+BuildRequires:	libpng-devel, libjpeg-devel
 Requires:	luajit, luajit-torch-dok
+Requires:	libpng, libjpeg
 
 %description
 This package provides routines to load/save and manipulate images
@@ -32,7 +34,6 @@ mkdir build
 cd build
 cmake .. \
  -DCMAKE_INSTALL_PREFIX=/usr \
- -DLUA_INCDIR=/usr/include/luajit-2.0 \
  -DTorch_INSTALL_LUA_PATH_SUBDIR=/usr/lib64/lua/5.1
 make
 
