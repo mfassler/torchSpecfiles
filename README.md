@@ -99,6 +99,8 @@ rpm -i luajit-deepmind-alewrap-*
 After you install the dependencies, here is the code that you can play with:
 https://sites.google.com/a/deepmind.com/dqn/
 
+(Note that the model itself takes up about ~9GB ram while running, so you'll probably
+need a machine with 12GB ram (or more) to even do anything useful.)
 
 
 ## To use both "trepl" and "qt" together:
