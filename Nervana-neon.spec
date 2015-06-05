@@ -7,8 +7,8 @@ Group:		Development/Languages
 License:	Apache
 URL:		https://github.com/NervanaSystems/neon
 
-#BuildRequires:	
-Requires:	Nervana-imgworker
+BuildRequires:	PyYAML >= 3.11
+Requires:	Nervana-imgworker, PyYAML >= 3.11
 
 %description
 Python-based Deep Learning Framework
@@ -33,6 +33,7 @@ cd neon
 
 sed -i -e 's/^GPU/#GPU/g' setup.cfg
 echo 'GPU = cudanet' >> setup.cfg
+#echo 'GPU = nervanagpu' >> setup.cfg
 
 make
 
@@ -44,7 +45,7 @@ mkdir -p %{buildroot}/usr/lib/python2.7/site-packages
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages
 python setup.py install --prefix=%{buildroot}/usr
 
-rm %{buildroot}/usr/lib/python2.7/site-packages/PyYAML-3.11-py2.7-linux-x86_64.egg
+rm -f %{buildroot}/usr/lib/python2.7/site-packages/PyYAML-3.11-py2.7-linux-x86_64.egg
 rm %{buildroot}/usr/lib/python2.7/site-packages/easy-install.pth
 rm %{buildroot}/usr/lib/python2.7/site-packages/site.py*
 mv %{buildroot}/usr/lib/python2.7/site-packages/neon-0.8.1-py2.7.egg/neon %{buildroot}/usr/lib/python2.7/site-packages/
