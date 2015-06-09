@@ -47,10 +47,13 @@ make %{?_smp_mflags}
 cd cuda-convnet2/build
 make install DESTDIR=%{buildroot}
 mv %{buildroot}/usr/lib %{buildroot}/usr/lib64
+mkdir -p %{buildroot}%{python_sitearch}
+cp ../cudanet/cudanet.py %{buildroot}%{python_sitearch}/
 
 
 %files
 %{_libdir}/libcconv*
+%{python_sitearch}/cudanet.*
 
 
 %changelog
