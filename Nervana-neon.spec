@@ -21,34 +21,23 @@ if [ ! -d neon ]; then
 fi
 cd neon
 
-git checkout setup.cfg
 git checkout master
 git pull
 
 
 %build
 cd neon
-# BUG:  this "-e" thing isn't working for me...
-#make -e GPU=cudanet
-
-sed -i -e 's/^GPU/#GPU/g' setup.cfg
-echo 'GPU = cudanet' >> setup.cfg
-#echo 'GPU = nervanagpu' >> setup.cfg
-
-make
+rm -rf dist
+python setup.py bdist
 
 
 %install
-cd neon
+cd neon/dist
+tarDir=`pwd`
 
-mkdir -p %{buildroot}/usr/lib/python2.7/site-packages
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages
-python setup.py install --prefix=%{buildroot}/usr
-
-rm -f %{buildroot}/usr/lib/python2.7/site-packages/PyYAML-3.11-py2.7-linux-x86_64.egg
-rm %{buildroot}/usr/lib/python2.7/site-packages/easy-install.pth
-rm %{buildroot}/usr/lib/python2.7/site-packages/site.py*
-mv %{buildroot}/usr/lib/python2.7/site-packages/neon-0.8.2-py2.7.egg/neon %{buildroot}/usr/lib/python2.7/site-packages/
+mkdir -p %{buildroot}
+cd %{buildroot}
+tar -xzf $tarDir/neon*tar.gz
 
 
 %files
