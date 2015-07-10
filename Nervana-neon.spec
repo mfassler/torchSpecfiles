@@ -1,5 +1,5 @@
 Name:		Nervana-neon
-Version:	0.0.1
+Version:	0.8.2
 Release:	1%{?dist}
 Summary:	Python-based Deep Learning Framework
 
@@ -48,7 +48,7 @@ python setup.py install --prefix=%{buildroot}/usr
 rm -f %{buildroot}/usr/lib/python2.7/site-packages/PyYAML-3.11-py2.7-linux-x86_64.egg
 rm %{buildroot}/usr/lib/python2.7/site-packages/easy-install.pth
 rm %{buildroot}/usr/lib/python2.7/site-packages/site.py*
-mv %{buildroot}/usr/lib/python2.7/site-packages/neon-0.8.1-py2.7.egg/neon %{buildroot}/usr/lib/python2.7/site-packages/
+mv %{buildroot}/usr/lib/python2.7/site-packages/neon-0.8.2-py2.7.egg/neon %{buildroot}/usr/lib/python2.7/site-packages/
 
 
 %files
