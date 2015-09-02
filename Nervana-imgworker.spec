@@ -1,5 +1,5 @@
 Name:		Nervana-imgworker
-Version:	0.0.1
+Version:	0.2.5
 Release:	1%{?dist}
 Summary:	Multithreaded decoding and transforms of jpg strings
 
@@ -23,6 +23,9 @@ cd imgworker
 
 git checkout master
 git pull
+
+# 2015-05-03, version 0.2.5:
+git checkout 76504f39ec5
 
 
 %build
