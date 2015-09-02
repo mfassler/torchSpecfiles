@@ -1,5 +1,5 @@
 Name:		Nervana-neon
-Version:	0.8.2
+Version:	0.9.0
 Release:	1%{?dist}
 Summary:	Python-based Deep Learning Framework
 
@@ -23,6 +23,9 @@ cd neon
 
 git checkout master
 git pull
+
+# 2015-08-19, v 0.9.0:
+git checkout d4d8ed498ee826
 
 
 %build
