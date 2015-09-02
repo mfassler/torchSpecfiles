@@ -1,12 +1,12 @@
 Name:		pycuda
-Version:	2015.1.2
+Version:	2015.1.3
 Release:	1%{?dist}
 Summary:	Python wrapper for Nvidia CUDA
 
 Group:		Development/Languages
 License:	MIT
 URL:		https://pypi.python.org/pypi/pycuda
-Source0:	pycuda-2015.1.2.tar.gz
+Source0:	pycuda-2015.1.3.tar.gz
 
 #BuildRequires:	
 #Requires:	
