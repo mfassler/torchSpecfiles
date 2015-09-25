@@ -1,6 +1,6 @@
 
 Name:		Nervana-maxas
-Version:	1.03
+Version:	1.06
 Release:	1%{?dist}
 Summary:	Assembler for NVIDIA Maxwell GPUs
 
@@ -25,8 +25,8 @@ cd maxas
 git checkout master
 git pull
 
-# Version 1.03:
-git checkout 38d5d9ea4d56931
+# Version 1.06:
+git checkout 0817b4b61b4
 
 
 %build

@@ -1,5 +1,5 @@
 Name:		Nervana-neon
-Version:	0.9.0
+Version:	1.0.0rc1
 Release:	1%{?dist}
 Summary:	Python-based Deep Learning Framework
 
@@ -7,8 +7,8 @@ Group:		Development/Languages
 License:	Apache
 URL:		https://github.com/NervanaSystems/neon
 
-BuildRequires:	PyYAML >= 3.11
-Requires:	Nervana-imgworker, PyYAML >= 3.11
+BuildRequires:	PyYAML >= 3.11, Nervana-maxas >= 1.06
+Requires:	Nervana-imgworker, PyYAML >= 3.11, h5py
 
 %description
 Python-based Deep Learning Framework
@@ -24,8 +24,8 @@ cd neon
 git checkout master
 git pull
 
-# 2015-08-19, v 0.9.0:
-git checkout d4d8ed498ee826
+# 2015-09-19, v1.0.0rc1
+git checkout 18863f1c79133153
 
 
 %build
@@ -44,8 +44,8 @@ tar -xzf $tarDir/neon*tar.gz
 
 
 %files
-%{_bindir}/hyperopt
 %{_bindir}/neon
+%{_bindir}/nvis
 /usr/lib/python2.7/site-packages/neon*
 #%{python_sitearch}/neon*
 

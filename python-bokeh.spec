@@ -8,7 +8,11 @@ License:	BSD
 URL:		http://bokeh.pydata.org/en/latest/
 
 #BuildRequires:
-#Requires:
+Requires: python-requests
+Requires: python-werkzeug
+Requires: python-flask
+Requires: python-tornado
+Requires: python-zmq
 
 %description
 Bokeh is a Python interactive visualization library that targets modern web 
